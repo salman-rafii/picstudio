@@ -15,6 +15,7 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
   List<TextInfo> texts = [];
   int currentIndex = 0;
 
+// funcion to save image to gallery
   saveToGallery(BuildContext context) {
     if (texts.isNotEmpty) {
       screenshotController.capture().then((Uint8List? image) {
@@ -28,6 +29,8 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     }
   }
 
+
+// function to save image
   saveImage(Uint8List bytes) async {
     final time = DateTime.now()
         .toIso8601String()

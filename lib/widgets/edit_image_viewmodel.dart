@@ -29,7 +29,6 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     }
   }
 
-
 // function to save image
   saveImage(Uint8List bytes) async {
     final time = DateTime.now()
@@ -79,17 +78,22 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     });
   }
 
+// increase font size function
+
   increaseFontSize() {
     setState(() {
       texts[currentIndex].fontSize += 2;
     });
   }
 
+// decrease font size function
   decreaseFontSize() {
     setState(() {
       texts[currentIndex].fontSize -= 2;
     });
   }
+
+// align left function
 
   alignLeft() {
     setState(() {
@@ -97,18 +101,21 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     });
   }
 
+// align center function
   alignCenter() {
     setState(() {
       texts[currentIndex].textAlign = TextAlign.center;
     });
   }
 
+// align right function
   alignRight() {
     setState(() {
       texts[currentIndex].textAlign = TextAlign.right;
     });
   }
 
+// function to bold the text
   boldText() {
     setState(() {
       if (texts[currentIndex].fontWeight == FontWeight.bold) {
@@ -119,6 +126,7 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     });
   }
 
+// function to italic the text
   italicText() {
     setState(() {
       if (texts[currentIndex].fontStyle == FontStyle.italic) {
